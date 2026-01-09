@@ -1,116 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#050505">
-    <title>ZETTRA | Secure Schedule</title>
-    
-    <!-- Fonte Tecnológica -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --bg-color: #050505;
-            --text-color: #ffffff;
-            --accent: #00ff88;
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'JetBrains Mono', monospace;
-            height: 100%;
-            overflow: hidden; /* Impede rolagem dupla */
-        }
-
-        /* Cabeçalho Fixo */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background-color: rgba(5, 5, 5, 0.95);
-            border-bottom: 1px solid #222;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-        }
-
-        .brand {
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-        
-        .dot { color: var(--accent); }
-
-        /* Container do Calendly */
-        .agenda-container {
-            width: 100%;
-            height: 100%;
-            padding-top: 60px; /* Espaço para não ficar atrás do header */
-            padding-bottom: 50px; /* Espaço para não ficar atrás do footer */
-            box-sizing: border-box;
-            background: var(--bg-color);
-        }
-
-        /* O TRUQUE DE MESTRE: Overlay de Rodapé */
-        /* Esta barra cobre a marca do Calendly */
-        .z-footer-mask {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 45px; /* Altura exata para tapar o logo */
-            background-color: var(--bg-color);
-            border-top: 1px solid #222;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999; /* Garante que fique POR CIMA do iframe */
-        }
-
-        .system-status {
-            font-size: 0.65rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .status-active { color: var(--accent); }
-
-    </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda | Lorrane Sodré</title>
+<style>
+body{margin:0;background:#050505;font-family:monospace;overflow:hidden}
+.z-mask{position:fixed;bottom:0;width:100%;height:50px;background:#050505;color:#0f8;display:flex;align-items:center;justify-content:center;z-index:9999;border-top:1px solid #333}
+</style>
 </head>
 <body>
-
-    <!-- Cabeçalho ZETTRA -->
-    <div class="header">
-        <div class="brand">ZETTRA<span class="dot">.</span></div>
-    </div>
-
-    <!-- Área da Agenda -->
-    <div class="agenda-container">
-        <!-- CORREÇÃO FEITA AQUI: LINK PHOENIX-BRONZE INSERIDO -->
-        <div class="calendly-inline-widget" 
-             data-url="https://calendly.com/lorranesodremakeup/pre-agendamento" 
-             style="min-width:320px;height:100%;">
-        </div>
-    </div>
-
-    <!-- A MÁSCARA (Cobre o logo do Calendly) -->
-    <div class="z-footer-mask">
-        <span class="system-status">
-            POWERED BY <span class="status-active">ZETTRA INTELLIGENCE</span> /// SYSTEM SECURE
-        </span>
-    </div>
-
-    <!-- Script Obrigatório do Calendly -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
+<!-- AQUI VAI O LINK ESPECÍFICO DA LORRANE -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/lorranesodremakeup" style="min-width:320px;height:100vh;"></div>
+<div class="z-mask">POWERED BY ZETTRA /// SYSTEM SECURE</div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
